@@ -6,7 +6,8 @@ import pdb
 
 import pkg_resources
 
-if __name__ == '__main__':
+
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('script')
     args = parser.parse_args()
@@ -16,3 +17,7 @@ if __name__ == '__main__':
     f = ep.load()
 
     pdb.runcall(f)
+
+if __name__ == '__main__':
+    import sys
+    sys.exit(main())
